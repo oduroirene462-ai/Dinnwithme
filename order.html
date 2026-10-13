@@ -1,65 +1,300 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Order - Dinnwithme</title>
 </head>
-<body style="background-color: rgb(255, 248, 231); font-family: Arial, sans-serif;">
+<body style="background-image: url(images/download.jpg); background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;">
 
-    <h1 style="background-color: rgb(230, 126, 34); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px;">Place Your Order</h1>
-
-
-    <table>
-        <tr>
-            <th colspan="2">Fufu Dishes</th>
-            <td rowspan="1">Fufu with Lightsoup</td>
-            <td rowspan="1">Fufu with Groundnuntsoup</td>
-            <td rowspan="1">Fufu with Abonobonusoup</td>
-        </tr>
-        <tr>
-            <th colspan="2"> Banku Dishes</th>
-            <td rowspan="1">Banku with Okrosoup</td>
-            <td rowspan="1">Banku with Oilless Okro </td>
-            <td rowspan="1" >Banku with tilapia</td>
-        </tr>
-
-    </table>
-
-
-
-    <form style="background-color: rgb(255, 255, 255); padding: 20px; border-radius: 10px; width: 400px;">
-        
-        <label>Your Name:</label><br>
-        <input type="text" placeholder="Enter your name" style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
-
-        <label>Phone Number:</label><br>
-        <input type="tel" placeholder="059..." style="width: 100%; padding: 8px; margin: 8px 0;"><br><br>
-
-        <label>Select Food:</label><br>
-        <select style="width: 100%; padding: 8px; margin: 8px 0;">
-            <option>Fufu with goat meat lightsoup</option>
-            <option>Fufu with chicken lightsoup</option>
-            <option>Fufu with palmnut soup</option>
-            <option>Banku with okro stew</option>
-            <option>Banku with tilapia</option>
-            <option>Rice dishes</option>
-        </select><br><br>
-
-        <label>Delivery Address:</label><br>
-        <textarea placeholder="Enter your location" style="width: 100%; padding: 8px; margin: 8px 0;"></textarea><br><br>
-
-        <button type="submit" style="
+    <h1 style="
+        background-color: rgb(230, 126, 34);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+    ">
+        Place Your Order
+    </h1>
+    <h2 style="
+        background-color: rgb(230, 126, 34);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+    ">
+        Customer Order Form
+    </h2>
+    <form action="#" method="post" style="
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        max-width: 85%;
+    ">
+        <!-- Customer Name -->
+        <label for="customerName">Your Name:</label>
+        <br>
+        <input
+            type="text"
+            id="customerName"
+            name="customerName"
+            placeholder="Enter your name"
+            required
+            style="
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 126, 34);
+                border-radius: 5px;
+            "
+        >
+        <br><br>
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <br>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="059..."
+            required
+            style="
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 126, 34);
+                border-radius: 5px;
+            "
+        >
+        <br><br>
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <br>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            style="
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 126, 34);
+                border-radius: 5px;
+            "
+        >
+        <br><br>
+        <!-- Food Selection -->
+        <label for="food">Select Food:</label>
+        <br>
+        <select
+            id="food"
+            name="food"
+            required
+            style="
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 126, 34);
+                border-radius: 5px;
+            "
+        >
+            <option value="">-- Choose a meal --</option>
+            <option value="Fufu with goat meat lightsoup">
+                Fufu with goat meat lightsoup
+            </option>
+            <option value="Fufu with chicken lightsoup">
+                Fufu with chicken lightsoup
+            </option>
+            <option value="Fufu with palmnut soup">
+                Fufu with palmnut soup
+            </option>
+            <option value="Banku with okro stew">
+                Banku with okro stew
+            </option>
+            <option value="Banku with tilapia">
+                Banku with tilapia
+            </option>
+            <option value="Rice dishes">
+                Rice dishes
+            </option>
+        </select>
+        <br><br>
+        <!-- Checkboxes -->
+        <label>
+            <b>Choose Extra Options:</b>
+        </label>
+        <br><br>
+        <input
+            type="checkbox"
+            id="extraPepper"
+            name="extras"
+            value="Extra Pepper"
+        >
+        <label for="extraPepper">Extra Pepper</label>
+        <br>
+        <input
+            type="checkbox"
+            id="extraMeat"
+            name="extras"
+            value="Extra Meat"
+        >
+        <label for="extraMeat">Extra Meat</label>
+        <br>
+        <input
+            type="checkbox"
+            id="takeaway"
+            name="extras"
+            value="Takeaway Packaging"
+        >
+        <label for="takeaway">Takeaway Packaging</label>
+        <br><br>
+        <!-- Delivery Address -->
+        <label for="address">Delivery Address:</label>
+        <br>
+        <textarea
+            id="address"
+            name="address"
+            placeholder="Enter your location"
+            required
+            style="
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 126, 34);
+                border-radius: 5px;
+            "
+        ></textarea>
+        <br><br>
+        <!-- Submit Button -->
+        <button
+            type="submit"
+            style="
+                background-color: rgb(230, 126, 34);
+                color: rgb(255, 255, 255);
+                padding: 12px 25px;
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                width: 100%;
+            "
+        >
+            Submit Order
+        </button>
+    </form>
+    <br>
+    <!-- Food Information Table -->
+    <h2 style="
+        background-color: rgb(230, 126, 34);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+    ">
+        Food Order Information
+    </h2>
+    <table
+        border="1"
+        style="
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            background-color: rgb(255, 255, 255);
+            color: rgb(80, 45, 20);
+            margin-bottom: 25px;
+        "
+    >
+        <tr style="
             background-color: rgb(230, 126, 34);
             color: rgb(255, 255, 255);
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
+        ">
+            <th style="padding: 12px;">Category</th>
+            <th style="padding: 12px;">Meal Details</th>
+        </tr>
+        <!-- Colspan -->
+        <tr>
+            <th
+                colspan="2"
+                style="
+                    padding: 12px;
+                    background-color: rgb(255, 224, 178);
+                    color: rgb(120, 60, 15);
+                "
+            >
+                AVAILABLE MEALS
+            </th>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Fufu Dishes</td>
+            <td style="padding: 12px;">
+                Fufu with goat meat lightsoup
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Fufu Dishes</td>
+            <td style="padding: 12px;">
+                Fufu with chicken lightsoup
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Fufu Dishes</td>
+            <td style="padding: 12px;">
+                Fufu with palmnut soup
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Banku Dishes</td>
+            <td style="padding: 12px;">
+                Banku with okro stew
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Banku Dishes</td>
+            <td style="padding: 12px;">
+                Banku with tilapia
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Rice Dishes</td>
+            <td style="padding: 12px;">Rice dishes</td>
+        </tr>
+        <!-- Rowspan -->
+        <tr>
+            <td
+                rowspan="2"
+                style="
+                    padding: 12px;
+                    background-color: rgb(255, 224, 178);
+                    font-weight: bold;
+                "
+            >
+                Order Status
+            </td>
+            <td style="padding: 12px;">Pending</td>
+        </tr>
+        <tr>
+            <td style="padding: 12px;">Confirmed</td>
+        </tr>
+    </table>
+    <!-- Back to Home -->
+    <a
+        href="index.html"
+        style="
+            display: inline-block;
+            background-color: rgb(230, 126, 34);
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-        ">Submit Order</button>
-    </form>
-
-    <br>
-    <a href="index.html">Back to Home</a>
-
+        "
+    >
+        Back to Home
+    </a>
 </body>
 </html>
